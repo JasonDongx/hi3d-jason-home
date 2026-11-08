@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "你的名字 · 林间",
+    "description": "一句话描述这个主页。"
+  },
+  "profile": {
+    "name": "你的名字",
+    "brand": "你的站名",
+    "brandMark": "字",
+    "forestName": "你的林子",
+    "forestLatin": "a walk in the woods",
+    "place": "地点 · 时间",
+    "hint": "拖动环顾 · 点路标读文章",
+    "credit": "页脚小字",
+    "readerNote": "全文说明",
+    "topLink": { "label": "你的站点 ↗", "url": "https://example.com" }
+  },
+  "sections": [
+    { "id": "writing", "label": "写作", "kicker": "writing", "title": "写下来的", "desc": "栏目说明。", "accent": "#a9d8b6" },
+    { "id": "works", "label": "作品", "kicker": "works", "title": "做过的东西", "desc": "栏目说明。", "accent": "#d3e8b4" },
+    { "id": "journal", "label": "日志", "kicker": "journal", "title": "林间日志", "desc": "栏目说明。", "accent": "#b9d4e4" },
+    { "id": "about", "label": "关于", "kicker": "about", "title": "关于我", "desc": "栏目说明。", "accent": "#e6d2a6" }
+  ],
+  "about": {
+    "paragraphs": ["关于你的第一段。", "关于你的第二段。"],
+    "links": [{ "label": "你的站点", "url": "https://example.com" }]
+  },
+  "outsidePages": [
+    { "title": "示例小站", "url": "https://example.com/tool/", "desc": "一句话介绍这个站外页面" }
+  ],
+  "assets": {
+    "_comment": "模板自带 forest 下的植被、木牌与两只狗；要换成自己的手办，在这里按 slot 覆盖文件名即可。"
+  }
+}

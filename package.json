@@ -1,0 +1,29 @@
+{
+  "name": "hi3d-home-templates",
+  "description": "用 Hi3D 生成的 3D 个人主页模板合集：森林、海洋、小岛，各自独立。",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:site": "node scripts/dev-site.mjs",
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "content:sync": "node scripts/sync-content.mjs",
+    "content:reset": "node scripts/sync-content.mjs --reset"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
+    "lucide-react": "0.468.0",
+    "marked": "^18.1.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.10"
+  }
+}

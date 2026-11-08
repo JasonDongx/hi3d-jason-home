@@ -1,0 +1,26 @@
+node_modules
+dist
+
+# 个人内容与个人资产：模板仓库不跟踪
+templates/forest/content/site.json
+templates/forest/content/owner.json
+asset/
+public/forest/models/*.glb
+# 成品内容包：全量文章正文与博客图片，仅本地/线上快照使用
+public/forest/content/
+
+# 通用森林植被属于模板本体，随仓库提交
+!public/forest/models/forest/
+!public/forest/models/forest/*.glb
+
+# 本地验证产物
+.screenshots/
+.viewer/
+.preview-site/
+
+# 工具 / 工作区元数据
+.workbuddy/
+.wbapp_*.genie
+
+# 发布用构建产物
+preview-site/

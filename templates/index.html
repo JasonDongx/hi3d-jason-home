@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#eef3e4" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d2a1a'/%3E%3Cpath d='M16 6l7 12h-4l5 8H8l5-8H9z' fill='%2393c46a'/%3E%3C/svg%3E"
+    />
+    <meta name="description" content="三个 3D 场景个人主页模板：林间小路、海底小站、我的小岛。" />
+    <title>3D 场景主页模板集</title>
+    <style>
+      :root {
+        --ink: #17211a;
+        --ink-soft: #55635a;
+        --paper: #f6f7f1;
+        --line: rgba(23, 33, 26, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        background:
+          radial-gradient(1100px 520px at 12% -10%, #e4efd6 0%, rgba(228, 239, 214, 0) 62%),
+          radial-gradient(900px 460px at 92% 8%, #dceef0 0%, rgba(220, 238, 240, 0) 58%),
+          var(--paper);
+        color: var(--ink);
+        font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui,
+          -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: clamp(40px, 8vh, 96px) clamp(20px, 5vw, 48px) 64px;
+      }
+
+      header .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+      }
+
+      header .eyebrow i {
+        width: 22px;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.5;
+      }
+
+      h1 {
+        margin: 18px 0 0;
+        font-size: clamp(30px, 5.2vw, 52px);
+        line-height: 1.14;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+      }
+
+      .lede {
+        margin: 16px 0 0;
+        max-width: 44em;
+        font-size: clamp(14px, 1.5vw, 16px);
+        line-height: 1.85;
+        color: var(--ink-soft);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: clamp(16px, 2.4vw, 26px);
+        margin-top: clamp(32px, 5vh, 52px);
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 1px 2px rgba(23, 33, 26, 0.04), 0 14px 34px -22px rgba(23, 33, 26, 0.4);
+        transition: transform 0.32s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.32s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 1px 2px rgba(23, 33, 26, 0.05), 0 26px 48px -24px rgba(23, 33, 26, 0.42);
+      }
+
+      .card:focus-visible {
+        outline: 2px solid #4d7c3a;
+        outline-offset: 3px;
+      }
+
+      .shot {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+      }
+
+      .shot::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 58%, rgba(0, 0, 0, 0.16) 100%);
+      }
+
+      .shot.forest {
+        background-image: url('./preview/forest.jpg');
+        background-color: #cfe3a8;
+        background-position: center 46%;
+      }
+
+      .shot.ocean {
+        background-image: url('./preview/ocean.jpg');
+        background-color: #6cc0c8;
+        background-position: center 50%;
+      }
+
+      .shot.island {
+        background-image: url('./preview/island.jpg');
+        background-color: #7cc0c6;
+        background-position: center 52%;
+      }
+
+      .shot.forest,
+      .shot.ocean,
+      .shot.island {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .body {
+        padding: 18px 20px 20px;
+      }
+
+      .name {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 17px;
+        font-weight: 650;
+        letter-spacing: 0.01em;
+      }
+
+      .route {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        color: #7a8a7e;
+        font-weight: 400;
+      }
+
+      .desc {
+        margin: 8px 0 0;
+        font-size: 13.5px;
+        line-height: 1.7;
+        color: var(--ink-soft);
+      }
+
+      footer {
+        margin-top: clamp(36px, 6vh, 64px);
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        justify-content: space-between;
+        font-size: 12.5px;
+        color: #7a8a7e;
+      }
+
+      footer code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        background: rgba(23, 33, 26, 0.05);
+        padding: 2px 6px;
+        border-radius: 5px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <span class="eyebrow"><i></i>3D Scene Templates</span>
+        <h1>三个场景，三种气质。<br />点进去就是首屏。</h1>
+        <p class="lede">
+          同一套内容结构，分别长在森林、海底和小岛上。每个模板都是独立的单页应用，可以直接用路由进入，
+          也可以把某个模板单独部署出去做自己的主页。
+        </p>
+      </header>
+
+      <section class="grid">
+        <a class="card" href="./forest/">
+          <div class="shot forest" aria-hidden="true"></div>
+          <div class="body">
+            <div class="name">林间小路 <span class="route">/forest</span></div>
+            <p class="desc">苔藓、倒木与一条穿过林子的土路，路牌就是导航。</p>
+          </div>
+        </a>
+
+        <a class="card" href="./ocean/">
+          <div class="shot ocean" aria-hidden="true"></div>
+          <div class="body">
+            <div class="name">海底小站 <span class="route">/ocean</span></div>
+            <p class="desc">沉在深水里的观测站，光线从水面斜穿下来。</p>
+          </div>
+        </a>
+
+        <a class="card" href="./island/">
+          <div class="shot island" aria-hidden="true"></div>
+          <div class="body">
+            <div class="name">我的小岛 <span class="route">/island</span></div>
+            <p class="desc">一座浮在海上的小岛，退潮时能走到礁石那头。</p>
+          </div>
+        </a>
+      </section>
+
+      <footer>
+        <span>基于 Vite + React Three Fiber / three.js · 三个模板共用一套内容结构</span>
+        <span>路由：<code>/forest</code> <code>/ocean</code> <code>/island</code></span>
+      </footer>
+    </main>
+  </body>
+</html>
+

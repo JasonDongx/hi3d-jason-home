@@ -1,0 +1,54 @@
+{
+  "islandUrl": "./assets/hi3d-island.glb",
+  "boyUrl": "./assets/hi3d-boy.glb",
+  "islandWidth": 10.6,
+  "islandRotation": [
+    0,
+    0,
+    0
+  ],
+  "boyHeight": 1.9,
+  "boyPosition": [
+    0,
+    0.8,
+    2
+  ],
+  "boyRotation": [
+    0,
+    0.45,
+    0
+  ],
+  "anchors": {
+    "about": [
+      -1.65,
+      3.2,
+      2.3
+    ],
+    "writing": [
+      -3.3,
+      3.1,
+      -0.5
+    ],
+    "projects": [
+      3,
+      2.5,
+      0.1
+    ],
+    "collection": [
+      3.8,
+      3.3,
+      -2.8
+    ]
+  },
+  "ocean": {
+    "waterLevel": 0.18,
+    "coastMap": "./assets/hi3d-coastline.png",
+    "extent": 24,
+    "distanceRange": 8,
+    "speed": 1,
+    "deepColor": "#3389a5",
+    "midColor": "#63b8bd",
+    "shallowColor": "#b5e5cd"
+  },
+  "boyGroundY": 1.311861246257119
+}

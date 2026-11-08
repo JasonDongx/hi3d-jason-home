@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "林间 · 3D 森林主页模板",
+    "description": "一条穿过林子的小径，沿路的路标通向你的全部内容。"
+  },
+  "profile": {
+    "name": "林间样本",
+    "brand": "林间",
+    "brandMark": "林",
+    "forestName": "林 间",
+    "forestLatin": "a walk in the woods",
+    "place": "TEMPERATE FOREST",
+    "lede": "把主页搬进一片林子，沿着小径往里走就是全部内容。",
+    "hint": "拖动环顾 · 点路标读文章",
+    "credit": "光从树冠落下来",
+    "readerNote": "示例节选 · 换上内容包即为自己的文章",
+    "topLink": { "label": "示例 ↗", "url": "https://example.com" }
+  },
+  "sections": [
+    {
+      "id": "writing",
+      "label": "写作",
+      "kicker": "writing",
+      "title": "写下来的",
+      "desc": "长文、随笔与值得留下的文字，按时间往回翻。",
+      "accent": "#a9d8b6"
+    },
+    {
+      "id": "works",
+      "label": "作品",
+      "kicker": "works",
+      "title": "做过的东西",
+      "desc": "项目、作品集、小工具，以及它们的入口。",
+      "accent": "#d3e8b4"
+    },
+    {
+      "id": "journal",
+      "label": "日志",
+      "kicker": "journal",
+      "title": "林间日志",
+      "desc": "短记录与日常切片，像林子里每天不同的光。",
+      "accent": "#b9d4e4"
+    },
+    {
+      "id": "about",
+      "label": "关于",
+      "kicker": "about",
+      "title": "关于我",
+      "desc": "自我介绍、联系方式，以及这座林子的来由。",
+      "accent": "#e6d2a6"
+    }
+  ],
+  "contentBySection": {
+    "writing": [
+      {
+        "id": "demo-forest-home",
+        "title": "把主页搬进一片林子",
+        "date": "2026-11-01",
+        "tags": ["模板", "示例"],
+        "excerpt": "这是一篇示例文章，用来展示阅读器的排版效果，不代表任何真实内容。",
+        "paragraphs": [
+          "这是一篇示例文章，用来展示阅读器的排版效果。沿着林间小径散布的路标各自通向一个栏目，点开后可以在这里读到正文，文字、日期与标签都来自内容包。",
+          "场景本身不关心内容是谁的：它只认栏目定义，以及每篇文章的标题、日期、标签和正文。把自己的数据填进来，页面就会整包切换。",
+          "模板仓库里默认放的是中性示例，没有任何真实身份信息。需要展示成品时，用同步命令从内容源生成一份本地内容包即可。"
+        ]
+      },
+      {
+        "id": "demo-content-schema",
+        "title": "林间的内容结构",
+        "date": "2026-10-28",
+        "tags": ["结构", "示例"],
+        "excerpt": "内容包是一份 JSON，栏目可以增删，场景会沿小径自动排布路标。",
+        "paragraphs": [
+          "内容包是一份 JSON，字段分成几组：站点元信息、身份与文案、栏目定义、文章列表、关于与外链，以及 3D 资产的文件名。",
+          "栏目定义可以增删，场景会按数量沿小径自动排布路标；文章正文支持 Markdown 与 HTML 两种格式，全文原样保留。",
+          "这种拆法让模板和成品保持同一套代码：仓库里只留模板与示例，真实的文章和资产留在本地或被忽略的内容包里。"
+        ]
+      }
+    ],
+    "works": [
+      {
+        "id": "demo-work-1",
+        "title": "示例作品 · 一个小工具",
+        "date": "2026-10-25",
+        "tags": ["作品", "示例"],
+        "excerpt": "项目、作品集或自己做的小站，都放在这一栏。",
+        "paragraphs": [
+          "项目、作品集、开源仓库或自己做的小站，都可以放在「作品」这一栏。每条建议写清楚它是什么、做了什么、去哪里看。",
+          "如果条目里带了链接，阅读器底部会渲染一个可点的入口；模板里的示例链接指向 example.com，换成自己的即可。"
+        ]
+      },
+      {
+        "id": "demo-work-2",
+        "title": "示例作品 · 一份作品集",
+        "date": "2026-10-18",
+        "tags": ["作品", "示例"],
+        "excerpt": "没有作品也没关系，把这一栏换成「阅读」「影音」或「足迹」都行。",
+        "paragraphs": [
+          "四个栏目只是默认建议，不是硬规定。个人网站常见的主题还有阅读、影音、旅行足迹、收藏、摄影、简历、联系与现在（Now）。",
+          "改 `content/demo.json` 里的 `sections` 数组即可：增删栏目、改名字都不用动场景代码，路标会自动重排。"
+        ]
+      }
+    ],
+    "journal": [
+      {
+        "id": "demo-journal-1",
+        "title": "示例日志 · 一次内容同步",
+        "date": "2026-11-02",
+        "tags": ["日志", "示例"],
+        "excerpt": "按日期倒序排列的短记录，正文完整保留。",
+        "paragraphs": [
+          "这一条是示例日志。同步脚本会按日期倒序取出全部条目，正文完整保留，列表只显示摘要。",
+          "如果内容源里没有对应集合，脚本会跳过并在终端给出提示，页面则继续展示中性示例，不会白屏。"
+        ]
+      },
+      {
+        "id": "demo-journal-2",
+        "title": "示例日志 · 正文如何生成",
+        "date": "2026-11-01",
+        "tags": ["日志", "示例"],
+        "excerpt": "标题、日期、标签取自元数据，Markdown 原文交给阅读器渲染。",
+        "paragraphs": [
+          "标题、日期和标签来自文件头部的元数据，Markdown 正文连同图片一起搬过来，阅读器里直接渲染成排版完整的全文。",
+          "这样不需要在内容包里塞 HTML，也不必为每篇文章手写段落数组。"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "paragraphs": [
+      "这是一个 3D 森林风格的个人主页模板，仓库里不含任何真实个人信息。",
+      "文字、链接、栏目文案和 3D 资产都由内容包提供；默认使用中性示例。",
+      "把自己的内容放进来后，沿小径的路标和阅读器会整包切换，场景代码不需要改动。"
+    ],
+    "links": [{ "label": "示例站点", "url": "https://example.com" }]
+  },
+  "assets": {
+    "companion": "forest/companion.glb",
+    "runner": "forest/runner.glb",
+    "sign": "forest/sign.glb",
+    "fir": "forest/fir.glb",
+    "spruce": "forest/spruce.glb",
+    "oak": "forest/oak.glb",
+    "rock": "forest/rock.glb",
+    "shrub": "forest/shrub.glb",
+    "deadwood": "forest/deadwood.glb"
+  }
+}
