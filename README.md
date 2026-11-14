@@ -6,6 +6,16 @@
 - 3D 模型大多做过减面 + WebP 贴图压缩，海洋版单个 GLB 在 0.6–1.4MB，小岛场景约 7.7MB
 - 三套模板都是中性示例内容（森林示例站、海底小站、我的小岛），替换数据文件即可换成自己的
 
+## 在线预览
+
+已通过 GitHub Pages 部署，无需本地运行即可查看：<https://jasondongx.github.io/hi3d-jason-home/>
+
+| 模板 | 在线地址 |
+| --- | --- |
+| 森林 | <https://jasondongx.github.io/hi3d-jason-home/forest/> |
+| 海洋 | <https://jasondongx.github.io/hi3d-jason-home/ocean/> |
+| 小岛 | <https://jasondongx.github.io/hi3d-jason-home/island/> |
+
 ## 模板一览
 
 | 模板 | 本地地址 | 风格 | 资产目录 |
