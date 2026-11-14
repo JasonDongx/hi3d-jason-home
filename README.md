@@ -50,7 +50,7 @@
 │  ├─ ocean/                    # models / assets / tex
 │  └─ island/                   # assets（island.glb / boy.glb / 海浪贴图）+ 内容与场景 JSON
 ├─ scripts/                     # 内容生成与本地预览脚本
-├─ docs/previews/               # README 预览截图（JPEG，约 160–270KB/张）
+├─ docs/previews/               # README 预览截图（JPEG，约 200–360KB/张）
 ├─ vite.config.js               # 多入口配置（root 指向 templates/）
 └─ package.json
 ```
